@@ -1,9 +1,9 @@
 %define upstream_name    Class-Load
-%define upstream_version 0.06
+%define upstream_version 0.13
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 6
+Release:    1
 
 Summary:    A working (require "Class::Name") and more
 License:    GPL+ or Artistic
@@ -15,8 +15,10 @@ BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(Test::Fatal)
 BuildRequires: perl(Test::More)
+# For make test
+BuildRequires: perl(Module::Runtime)
+BuildRequires: perl(Test::Without::Module)
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 'require EXPR' only accepts 'Class/Name.pm' style module names, not
@@ -28,7 +30,7 @@ throwing an error when it's not available. For that, we provide
 'try_load_class 'Class::Name''.
 
 Finally, sometimes we need to know whether a particular class has been
-loaded. Asking '%INC' is an option, but that will miss inner packages and
+loaded. Asking 'INC' is an option, but that will miss inner packages and
 any class for which the filename does not correspond to the package name.
 For that, we provide 'is_class_loaded 'Class::Name''.
 
@@ -55,5 +57,3 @@ rm -rf %buildroot
 %doc Changes META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
