@@ -28,7 +28,7 @@ throwing an error when it's not available. For that, we provide
 'try_load_class 'Class::Name''.
 
 Finally, sometimes we need to know whether a particular class has been
-loaded. Asking '%INC' is an option, but that will miss inner packages and
+loaded. Asking '%%INC' is an option, but that will miss inner packages and
 any class for which the filename does not correspond to the package name.
 For that, we provide 'is_class_loaded 'Class::Name''.
 
