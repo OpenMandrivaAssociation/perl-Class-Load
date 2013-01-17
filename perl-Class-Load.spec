@@ -12,10 +12,15 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:	%{name}.rpmlintrc
 
+BuildRequires:	perl(Data::OptList)
 BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildRequires:	perl(Module::Implementation)
+BuildRequires:	perl(Module::Runtime)
+BuildRequires:	perl(Package::Stash)
 BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Requires)
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
