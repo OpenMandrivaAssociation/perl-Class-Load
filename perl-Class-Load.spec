@@ -1,17 +1,17 @@
 %define upstream_name    Class-Load
 %define upstream_version 0.20
 
+Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
 Release:	2
-
-Summary:	A working (require "Class::Name") and more
-License:	GPL+ or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:	%{name}.rpmlintrc
-
+BuildArch:	noarch
+BuildRequires:	perl-devel
 BuildRequires:	perl(Data::OptList)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Module::Implementation)
@@ -21,8 +21,6 @@ BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Requires)
-BuildRequires:	perl-devel
-BuildArch:	noarch
 
 %description
 'require EXPR' only accepts 'Class/Name.pm' style module names, not
@@ -53,29 +51,6 @@ For that, we provide 'is_class_loaded 'Class::Name''.
 
 %files
 %doc Changes META.yml
-%{_mandir}/man3/*
 %{perl_vendorlib}/*
-
-
-%changelog
-* Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.60.0-6mdv2012.0
-+ Revision: 765088
-- rebuilt for perl-5.14.2
-
-* Sat Jan 21 2012 Oden Eriksson <oeriksson@mandriva.com> 0.60.0-5
-+ Revision: 763532
-- rebuilt for perl-5.14.x
-
-* Sun Apr 24 2011 Funda Wang <fwang@mandriva.org> 0.60.0-4
-+ Revision: 658280
-- rebuild
-
-* Sat Apr 23 2011 Funda Wang <fwang@mandriva.org> 0.60.0-3
-+ Revision: 657768
-- rebuild for updated spec-helper
-- rebuild for updated spec-helper
-
-* Sat Nov 27 2010 Guillaume Rousse <guillomovitch@mandriva.org> 0.60.0-1mdv2011.0
-+ Revision: 602042
-- import perl-Class-Load
+%{_mandir}/man3/*
 
