@@ -1,14 +1,14 @@
 %define upstream_name    Class-Load
-%define upstream_version 0.20
+%define upstream_version 0.21
 
 Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/Class-Load-%{upstream_version}.tar.gz
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	perl-devel
@@ -53,4 +53,5 @@ For that, we provide 'is_class_loaded 'Class::Name''.
 %doc Changes META.yml
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 

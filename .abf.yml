@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Class-Load-0.20.tar.gz: 3d91ec17067a5cdc3e1024f5dcba21f19d367907
+sources:
+  Class-Load-0.21.tar.gz: d01c9e6373d6d99a12f59d4afc76ca61c09cb035
