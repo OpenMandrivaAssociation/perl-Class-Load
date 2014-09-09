@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires: perl(namespace::clean)
 BuildRequires:	perl(Data::OptList)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Module::Implementation)
