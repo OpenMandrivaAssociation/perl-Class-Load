@@ -1,19 +1,19 @@
 %define upstream_name    Class-Load
-%define upstream_version 0.22
+%define upstream_version 0.25
 
 Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		http://metacpan.org/pod/Class::Load
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	perl-devel
-BuildRequires: perl(namespace::clean)
-BuildRequires:	perl(Data::OptList)
+BuildRequires:	perl(namespace::clean)
+BuildRequires:	perl(Data::OptList) >= 0.110
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Module::Implementation)
 BuildRequires:	perl(Module::Runtime)
