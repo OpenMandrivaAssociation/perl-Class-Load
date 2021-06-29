@@ -4,7 +4,7 @@
 Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Class::Load
@@ -38,7 +38,7 @@ any class for which the filename does not correspond to the package name.
 For that, we provide 'is_class_loaded 'Class::Name''.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
