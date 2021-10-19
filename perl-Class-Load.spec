@@ -41,16 +41,16 @@ For that, we provide 'is_class_loaded 'Class::Name''.
 %autosetup -p1 -n %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes META.yml
 %{perl_vendorlib}/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
