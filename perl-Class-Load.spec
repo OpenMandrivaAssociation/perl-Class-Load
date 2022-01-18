@@ -22,6 +22,7 @@ BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Requires)
+BuildRequires:	perl(Test::Needs)
 
 %description
 'require EXPR' only accepts 'Class/Name.pm' style module names, not
