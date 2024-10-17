@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Class::Load
+Url:		https://metacpan.org/pod/Class::Load
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
