@@ -1,14 +1,13 @@
 %define upstream_name    Class-Load
-%define upstream_version 0.25
 
 Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	0.25
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Class::Load
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{version}.tar.gz
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	perl-devel
@@ -39,7 +38,7 @@ any class for which the filename does not correspond to the package name.
 For that, we provide 'is_class_loaded 'Class::Name''.
 
 %prep
-%autosetup -p1 -n %{upstream_name}-%{upstream_version}
+%autosetup -p1 -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
