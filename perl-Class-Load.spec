@@ -12,7 +12,7 @@ Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(namespace::clean)
-BuildRequires:	perl(Data::OptList) >= 0.110
+BuildRequires:	perl(Data::OptList)
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(Module::Implementation)
 BuildRequires:	perl(Module::Runtime)
