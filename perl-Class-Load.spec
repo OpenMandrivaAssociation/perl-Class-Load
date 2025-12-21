@@ -3,7 +3,7 @@
 Summary:	A working (require "Class::Name") and more
 Name:		perl-%{upstream_name}
 Version:	0.25
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Class::Load
