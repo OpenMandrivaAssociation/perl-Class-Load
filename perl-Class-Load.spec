@@ -10,6 +10,7 @@ Url:		https://metacpan.org/pod/Class::Load
 Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{version}.tar.gz
 Source1:	%{name}.rpmlintrc
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(namespace::clean)
 BuildRequires:	perl(Data::OptList)
